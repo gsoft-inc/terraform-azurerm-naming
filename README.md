@@ -3,9 +3,13 @@ Terraform Module for naming Azure resources and resource groups following [Micro
 
 For the moment, the module(s) source attribute should be [referenced using github](https://www.terraform.io/docs/modules/sources.html#github).  Terraform registry will come soon.
 
+## Why Use This?
+1. Abstract the hassle of knowing which resource type needs to follow which naming convention (length, dashes or no dashes, etc.)
+2. Make it easier to follow company naming conventions
+3. Follow best pratices such as suffixing with a random string to avoid name collisions
+
 
 ## Example Usage
-
 ```hcl
 variable "location" {
     default = "eastus2"
@@ -51,4 +55,11 @@ resource "azurerm_storage_account" "example" {
 }
 ```
 
-This results into something like this:
+This example would result into something like this:
+
+- `organization-project-production-example-35xvzaq251lja` (resource group)
+  - `org0proj0prod0example035` (storage account)
+
+## License
+
+Copyright © 2019, GSoft inc. This code is licensed under the Apache License, Version 2.0. You may obtain a copy of this license at https://github.com/gsoft-inc/gsoft-license/blob/master/LICENSE.
