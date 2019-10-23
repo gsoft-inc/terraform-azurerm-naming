@@ -11,6 +11,14 @@ For the moment, the module(s) source attribute should be [referenced using githu
 
 ## Example Usage
 ```hcl
+provider "azurerm" {
+  version = "~>1.35.0"
+}
+
+provider "random" {
+  version = "~>2.2"
+}
+
 variable "location" {
     default = "eastus2"
 }
