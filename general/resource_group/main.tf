@@ -1,5 +1,5 @@
 module "resource_group" {
-  source     = "../../generic"
+  source     = "../../."
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes

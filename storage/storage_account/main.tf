@@ -1,5 +1,5 @@
 module "storage_account" {
-  source     = "../../generic"
+  source     = "../../."
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
