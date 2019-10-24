@@ -5,7 +5,7 @@ For the moment, the module(s) source attribute should be [referenced using githu
 
 ## Why Use This?
 1. Abstract the hassle of knowing which resource type needs to follow which naming convention (length, dashes or no dashes, etc.)
-2. Make it easier to follow company naming conventions
+2. Make it easier to follow naming conventions
 3. Follow best pratices such as suffixing with a random string to avoid name collisions
 
 
