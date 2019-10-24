@@ -67,6 +67,11 @@ This example would result into something like this:
 
 - `organization-project-production-example-35xvzaq251lja` (resource group)
   - `org0proj0prod0example035` (storage account)
+  
+## Updating the module
+```hcl
+terraform get -update
+```
 
 ## License
 
