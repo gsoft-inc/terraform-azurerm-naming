@@ -1,5 +1,5 @@
 # terraform-azurerm-naming
-Terraform Module for naming Azure resources and resource groups following [Microsoft's naming guidelines](https://github.com/MicrosoftDocs/architecture-center/blob/master/docs/best-practices/naming-conventions.md).
+Terraform Module for naming Azure resources and resource groups following [Microsoft's naming guidelines](https://docs.microsoft.com/en-us/azure/architecture/best-practices/resource-naming).
 
 For the moment, the module(s) source attribute should be [referenced using github](https://www.terraform.io/docs/modules/sources.html#github).  Terraform registry will come soon.
 
