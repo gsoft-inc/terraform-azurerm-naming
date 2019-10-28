@@ -1,6 +1,8 @@
 # terraform-azurerm-naming
 Terraform Module for naming Azure resources and resource groups following [Microsoft's naming guidelines](https://docs.microsoft.com/en-us/azure/architecture/best-practices/resource-naming).
 
+_Note: Since this module is comprised of multiple sub-modules, you need to [reference them in a particular fashion](https://www.terraform.io/docs/modules/sources.html#modules-in-package-sub-directories)._
+
 ## Why Use This?
 1. Abstract the hassle of knowing which resource type needs to follow which naming convention (length, dashes or no dashes, etc.)
 2. Make it easier to follow naming conventions
@@ -33,14 +35,14 @@ resource "random_string" "suffix" {
 }
 
 module "resource_group_name" {
-  source   = "gsoft-inc/naming/azurerm/general/resource_group"
+  source   = "gsoft-inc/naming/azurerm//modules/general/resource_group"
   name     = "example"
   prefixes = ["organization", "project", "production"]
   suffixes = [random_string.suffix.result]
 }
 
 module "storage_account_name" {
-  source   = "gsoft-inc/naming/azurerm/storage/storage_account"
+  source   = "gsoft-inc/naming/azurerm//modules/storage/storage_account"
   name     = "example"
   prefixes = ["org", "proj", "prod"]
   suffixes = [random_string.suffix.result]
