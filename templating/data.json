@@ -1,0 +1,12 @@
+{
+    "modules": [
+        {
+            "source": "../../../.",
+            "name": "vm_windows",
+            "long_name": "windows virtual machine",
+            "category": "compute",
+            "max_length": 15,
+            "regex": "^[a-zA-Z0-9-]*$"
+        }
+    ]
+}
