@@ -3,5 +3,6 @@ module "data_lake_storage" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
+  separator  = "0"
   max_length = 24
 }

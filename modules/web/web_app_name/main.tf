@@ -3,5 +3,6 @@ module "web_app_name" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
+  separator  = "-"
   max_length = 24
 }

@@ -3,5 +3,6 @@ module "network_interface" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
+  separator  = "-"
   max_length = 80
 }
