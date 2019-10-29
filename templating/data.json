@@ -6,7 +6,8 @@
             "long_name": "windows virtual machine",
             "category": "compute",
             "max_length": 15,
-            "regex": "^[a-zA-Z0-9-]*$"
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
         },
         {
             "source": "../../../.",
@@ -14,7 +15,8 @@
             "long_name": "web app",
             "category": "web",
             "max_length": 60,
-            "regex": "^[a-zA-Z0-9-]*$"
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
         },
         {
             "source": "../../../.",
@@ -22,7 +24,8 @@
             "long_name": "web app name",
             "category": "web",
             "max_length": 24,
-            "regex": "^[a-zA-Z0-9-]*$"
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
         },
         {
             "source": "../../../.",
@@ -30,7 +33,8 @@
             "long_name": "slot name",
             "category": "web",
             "max_length": 59,
-            "regex": "^[a-zA-Z0-9-]*$"
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
         },
         {
             "source": "../../../.",
@@ -38,7 +42,8 @@
             "long_name": "web job name",
             "category": "web",
             "max_length": 29,
-            "regex": "^[a-zA-Z0-9-]*$"
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
         },
         {
             "source": "../../../.",
@@ -46,6 +51,7 @@
             "long_name": "storage account",
             "category": "storage",
             "max_length": 24,
+            "separator": "0",
             "regex": "^[a-z0-9]*$"
         },
         {
@@ -54,7 +60,179 @@
             "long_name": "storage account container name",
             "category": "storage",
             "max_length": 63,
-            "regex": "^[a-z0-9-]*$"
+            "separator": "-",
+            "regex": "^[a-z0-9]{1}[a-z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "queue_name",
+            "long_name": "storage account queue name",
+            "category": "storage",
+            "max_length": 63,
+            "separator": "-",
+            "regex": "^[a-z0-9]{1}[a-z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "table_name",
+            "long_name": "storage account table name",
+            "category": "storage",
+            "max_length": 63,
+            "separator": "0",
+            "regex": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "file_share_name",
+            "long_name": "storage account file share name",
+            "category": "storage",
+            "max_length": 63,
+            "separator": "-",
+            "regex": "^[a-z0-9]{1}[a-z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "data_lake_storage",
+            "long_name": "data lake storage name",
+            "category": "storage",
+            "max_length": 24,
+            "separator": "0",
+            "regex": "^[a-z0-9]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "managed_disk_name",
+            "long_name": "managed disk name",
+            "category": "storage",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "virtual_network",
+            "long_name": "virtual network",
+            "category": "networking",
+            "max_length": 64,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "subnet",
+            "long_name": "virtual network subnet",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "network_interface",
+            "long_name": "network interface",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "network_security_group",
+            "long_name": "network security group",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "network_security_group_rule",
+            "long_name": "network security group rule",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "public_ip_address",
+            "long_name": "public ip address",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "load_balancer",
+            "long_name": "load balancer",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "load_balancer_rules_config",
+            "long_name": "load balancer rules config",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "application_gateway",
+            "long_name": "application gateway",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "traffic_manager_profile",
+            "long_name": "traffic manager profile",
+            "category": "networking",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "container_registry",
+            "long_name": "traffic manager profile",
+            "category": "containers",
+            "max_length": 50,
+            "separator": "0",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "service_bus_namespace",
+            "long_name": "service bus namespace",
+            "category": "messaging",
+            "max_length": 50,
+            "separator": "-",
+            "regex": "^[a-zA-Z]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "event_hubs_namespace",
+            "long_name": "event hubs namespace",
+            "category": "messaging",
+            "max_length": 50,
+            "separator": "-",
+            "regex": "^[a-zA-Z]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "event_hub",
+            "long_name": "event hub",
+            "category": "messaging",
+            "max_length": 50,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
         }
     ]
 }
