@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Storage account name."
+  description = "storage account name."
   type        = string
 }
 

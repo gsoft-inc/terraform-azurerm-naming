@@ -39,6 +39,14 @@
             "category": "web",
             "max_length": 29,
             "regex": "^[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "storage_account",
+            "long_name": "storage account",
+            "category": "storage",
+            "max_length": 24,
+            "regex": "^[a-z0-9]*$"
         }
     ]
 }
