@@ -47,6 +47,14 @@
             "category": "storage",
             "max_length": 24,
             "regex": "^[a-z0-9]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "container_name",
+            "long_name": "storage account container name",
+            "category": "storage",
+            "max_length": 63,
+            "regex": "^[a-z0-9-]*$"
         }
     ]
 }
