@@ -1,0 +1,44 @@
+{
+    "modules": [
+        {
+            "source": "../../../.",
+            "name": "vm_windows",
+            "long_name": "windows virtual machine",
+            "category": "compute",
+            "max_length": 15,
+            "regex": "^[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "web_app",
+            "long_name": "web app",
+            "category": "web",
+            "max_length": 60,
+            "regex": "^[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "web_app_name",
+            "long_name": "web app name",
+            "category": "web",
+            "max_length": 24,
+            "regex": "^[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "slot_name",
+            "long_name": "slot name",
+            "category": "web",
+            "max_length": 59,
+            "regex": "^[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "web_job_name",
+            "long_name": "web job name",
+            "category": "web",
+            "max_length": 29,
+            "regex": "^[a-zA-Z0-9-]*$"
+        }
+    ]
+}
