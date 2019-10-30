@@ -1,4 +1,9 @@
 output "result" {
   description = "The generated resource name."
-  value       = substr("${local.prefix}${local.separated_name}${local.suffix}", 0, var.max_length)
+  value = local.results[0]
+}
+
+output "results" {
+  description = "The generated resource names."
+  value = local.results
 }

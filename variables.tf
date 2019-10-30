@@ -3,6 +3,10 @@ variable "name" {
   type        = string
 }
 
+variable "nb_instances" {
+  default = 1
+}
+
 variable "prefixes" {
   description = "List of prefixes to append in front of the resource name."
   type        = list(string)
