@@ -5,4 +5,5 @@ module "virtual_network" {
   suffixes   = var.suffixes
   separator  = "-"
   max_length = 64
+  nb_instances = var.nb_instances
 }

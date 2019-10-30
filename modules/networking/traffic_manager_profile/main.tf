@@ -5,4 +5,5 @@ module "traffic_manager_profile" {
   suffixes   = var.suffixes
   separator  = "-"
   max_length = 80
+  nb_instances = var.nb_instances
 }

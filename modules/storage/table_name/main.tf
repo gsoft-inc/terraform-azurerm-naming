@@ -5,4 +5,5 @@ module "table_name" {
   suffixes   = var.suffixes
   separator  = "0"
   max_length = 63
+  nb_instances = var.nb_instances
 }
