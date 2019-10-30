@@ -2,6 +2,15 @@
     "modules": [
         {
             "source": "../../../.",
+            "name": "vm_linux",
+            "long_name": "linux virtual machine",
+            "category": "compute",
+            "max_length": 64,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
             "name": "vm_windows",
             "long_name": "windows virtual machine",
             "category": "compute",

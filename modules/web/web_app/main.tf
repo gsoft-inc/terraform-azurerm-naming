@@ -5,4 +5,5 @@ module "web_app" {
   suffixes   = var.suffixes
   separator  = "-"
   max_length = 60
+  nb_instances = var.nb_instances
 }

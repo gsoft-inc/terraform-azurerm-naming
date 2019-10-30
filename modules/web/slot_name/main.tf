@@ -5,4 +5,5 @@ module "slot_name" {
   suffixes   = var.suffixes
   separator  = "-"
   max_length = 59
+  nb_instances = var.nb_instances
 }

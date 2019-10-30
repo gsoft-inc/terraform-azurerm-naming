@@ -5,4 +5,5 @@ module "load_balancer_rules_config" {
   suffixes   = var.suffixes
   separator  = "-"
   max_length = 80
+  nb_instances = var.nb_instances
 }
