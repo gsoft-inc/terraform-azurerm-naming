@@ -1,9 +1,9 @@
 output "result" {
   description = "The generated storage account file share name name."
-  value       = regex("^[a-z0-9]{1}[a-z0-9-]*$", module.file_share_name.result)
+  value       = local.results[0]
 }
 
 output "results" {
   description = "The generated storage account file share name names."
-  value       = regex("^[a-z0-9]{1}[a-z0-9-]*$", module.file_share_name.results)
+  value       = local.results
 }

@@ -1,9 +1,9 @@
 output "result" {
   description = "The generated {{{long_name}}} name."
-  value       = regex("{{{regex}}}", module.{{name}}.result)
+  value       = local.results[0]
 }
 
 output "results" {
   description = "The generated {{{long_name}}} names."
-  value       = regex("{{{regex}}}", module.{{name}}.results)
+  value       = local.results
 }

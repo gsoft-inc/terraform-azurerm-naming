@@ -1,9 +1,9 @@
 output "result" {
   description = "The generated web job name name."
-  value       = regex("^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$", module.web_job_name.result)
+  value       = local.results[0]
 }
 
 output "results" {
   description = "The generated web job name names."
-  value       = regex("^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$", module.web_job_name.results)
+  value       = local.results
 }
