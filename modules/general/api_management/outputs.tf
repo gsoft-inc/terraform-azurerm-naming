@@ -1,4 +1,9 @@
 output "result" {
-  description = "The generated API management name."
-  value       = regex("^[a-zA-Z0-9-]*$", module.api_management.result)
+  description = "The generated api management name."
+  value       = local.results[0]
+}
+
+output "results" {
+  description = "The generated api management names."
+  value       = local.results
 }

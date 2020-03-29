@@ -2,6 +2,33 @@
     "modules": [
         {
             "source": "../../../.",
+            "name": "resource_group",
+            "long_name": "resource group",
+            "category": "general",
+            "max_length": 90,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "api_management",
+            "long_name": "api management",
+            "category": "general",
+            "max_length": 50,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "key_vault",
+            "long_name": "key vault",
+            "category": "general",
+            "max_length": 24,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
             "name": "vm_linux",
             "long_name": "linux virtual machine",
             "category": "compute",

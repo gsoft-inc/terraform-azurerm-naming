@@ -1,7 +1,18 @@
 locals {
-  prefix         = "${join(var.separator, var.prefixes)}"
-  suffix         = "${join(var.separator, var.suffixes)}"
+  prefix         = join(var.separator, var.prefixes)
+  suffix         = length(var.suffixes) == 0 ? random_string.suffix.result : join(var.separator, var.suffixes)
   separated_name = "${var.separator}${var.name}${var.separator}"
+}
+
+resource "random_string" "suffix" {
+  length  = 13
+  upper   = false
+  lower   = true
+  number  = true
+  special = false
+  keepers = {
+    name = var.name
+  }
 }
 
 data "null_data_source" "names" {
