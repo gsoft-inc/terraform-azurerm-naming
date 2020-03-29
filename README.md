@@ -12,40 +12,23 @@ _Note: Since this module is comprised of multiple sub-modules, you need to [refe
 ## Example Usage
 ```hcl
 provider "azurerm" {
-  version = "~>1.35.0"
-}
-
-provider "random" {
-  version = "~>2.2"
+  version = "=2.1.0"
 }
 
 variable "location" {
     default = "eastus2"
 }
 
-resource "random_string" "suffix" {
-  length  = 13
-  upper   = false
-  lower   = true
-  number  = true
-  special = false
-  keepers = {
-    region = var.location
-  }
-}
-
 module "resource_group_name" {
   source   = "gsoft-inc/naming/azurerm//modules/general/resource_group"
   name     = "example"
   prefixes = ["organization", "project", "production"]
-  suffixes = [random_string.suffix.result]
 }
 
 module "storage_account_name" {
   source   = "gsoft-inc/naming/azurerm//modules/storage/storage_account"
   name     = "example"
   prefixes = ["org", "proj", "prod"]
-  suffixes = [random_string.suffix.result]
 }
 
 resource "azurerm_resource_group" "example" {
@@ -66,7 +49,9 @@ resource "azurerm_storage_account" "example" {
 This example would result into something like this:
 
 - `organization-project-production-example-35xvzaq251lja` (resource group)
-  - `org0proj0prod0example035` (storage account)
+  - `org0proj0prod0example01x` (storage account)
+
+*Note: Random suffix is automatically generated but can but overriden.*
   
 ## Updating the module
 ```hcl
@@ -75,4 +60,4 @@ terraform get -update
 
 ## License
 
-Copyright © 2019, GSoft inc. This code is licensed under the Apache License, Version 2.0. You may obtain a copy of this license at https://github.com/gsoft-inc/gsoft-license/blob/master/LICENSE.
+Copyright © 2020, GSoft inc. This code is licensed under the Apache License, Version 2.0. You may obtain a copy of this license at https://github.com/gsoft-inc/gsoft-license/blob/master/LICENSE.
