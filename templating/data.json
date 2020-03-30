@@ -29,6 +29,15 @@
         },
         {
             "source": "../../../.",
+            "name": "availability_set",
+            "long_name": "availability set",
+            "category": "general",
+            "max_length": 80,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
             "name": "vm_linux",
             "long_name": "linux virtual machine",
             "category": "compute",
