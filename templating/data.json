@@ -278,6 +278,24 @@
             "max_length": 50,
             "separator": "-",
             "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "recovery_services_vault",
+            "long_name": "recovery services vault",
+            "category": "storage",
+            "max_length": 50,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+        },
+        {
+            "source": "../../../.",
+            "name": "backup_policy",
+            "long_name": "backup policy",
+            "category": "storage",
+            "max_length": 130,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-][^-]*$"
         }
     ]
 }
