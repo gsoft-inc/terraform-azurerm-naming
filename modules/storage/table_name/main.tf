@@ -3,7 +3,7 @@ module "table_name" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
-  separator  = "0"
+  separator  = var.separator != null ? var.separator : "0"
   max_length = 63
   nb_instances = var.nb_instances
 }

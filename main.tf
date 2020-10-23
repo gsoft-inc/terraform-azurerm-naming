@@ -1,6 +1,6 @@
 locals {
   prefix         = join(var.separator, var.prefixes)
-  suffix         = length(var.suffixes) == 0 ? random_string.suffix.result : join(var.separator, var.suffixes)
+  suffix         = var.suffixes == null ? random_string.suffix.result : join(var.separator, var.suffixes)
   separated_name = "${var.separator}${var.name}${var.separator}"
 }
 

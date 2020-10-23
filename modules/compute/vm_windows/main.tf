@@ -3,7 +3,7 @@ module "vm_windows" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
-  separator  = "-"
+  separator  = var.separator != null ? var.separator : "-"
   max_length = 15
   nb_instances = var.nb_instances
 }

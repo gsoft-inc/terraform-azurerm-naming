@@ -3,7 +3,7 @@ module "api_management" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
-  separator  = "-"
+  separator  = var.separator != null ? var.separator : "-"
   max_length = 50
   nb_instances = var.nb_instances
 }

@@ -3,7 +3,7 @@ module "container_registry" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
-  separator  = "0"
+  separator  = var.separator != null ? var.separator : "0"
   max_length = 50
   nb_instances = var.nb_instances
 }

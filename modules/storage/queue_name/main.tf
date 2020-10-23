@@ -3,7 +3,7 @@ module "queue_name" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
-  separator  = "-"
+  separator  = var.separator != null ? var.separator : "-"
   max_length = 63
   nb_instances = var.nb_instances
 }

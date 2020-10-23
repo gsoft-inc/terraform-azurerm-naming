@@ -3,7 +3,7 @@ module "virtual_network" {
   name       = var.name
   prefixes   = var.prefixes
   suffixes   = var.suffixes
-  separator  = "-"
+  separator  = var.separator != null ? var.separator : "-"
   max_length = 64
   nb_instances = var.nb_instances
 }
