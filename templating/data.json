@@ -7,7 +7,7 @@
             "category": "general",
             "max_length": 90,
             "separator": "-",
-            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$"
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_]*$"
         },
         {
             "source": "../../../.",

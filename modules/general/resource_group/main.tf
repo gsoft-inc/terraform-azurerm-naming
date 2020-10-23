@@ -11,7 +11,7 @@ module "resource_group" {
 data "null_data_source" "names" {
   count = var.nb_instances
   inputs = {
-    result = var.nb_instances > 1 ? regex("^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$", module.resource_group.results[count.index]) : regex("^[a-zA-Z0-9]{1}[a-zA-Z0-9-]*$", module.resource_group.result)
+    result = var.nb_instances > 1 ? regex("^[a-zA-Z0-9]{1}[a-zA-Z0-9-_]*$", module.resource_group.results[count.index]) : regex("^[a-zA-Z0-9]{1}[a-zA-Z0-9-_]*$", module.resource_group.result)
   }
 }
 
