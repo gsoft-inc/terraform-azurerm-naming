@@ -19,7 +19,3 @@ variable "suffixes" {
   type        = list(string)
   default     = null
 }
-
-variable "nb_instances" {
-  default = 1
-}
