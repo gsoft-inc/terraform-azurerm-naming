@@ -296,6 +296,15 @@
             "max_length": 130,
             "separator": "-",
             "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-][^-]*$"
-        }
+        },
+        {
+            "source": "../../../.",
+            "name": "search_service",
+            "long_name": "Search Service",
+            "category": "search",
+            "max_length": 64,
+            "separator": "-",
+            "regex": "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_.]*$"
+        }        
     ]
 }
